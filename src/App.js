@@ -2,6 +2,7 @@ import {useState} from "react";
 import './App.css';
 import Counter from "./components/Counter";
 import Button from "./components/Button";
+import ResetButton from "./components/ResetButton";
 
 const texts = ['Click me', 'Click me please', 'Hit me', 'Press me', 'Click me again', 'Press me please']
 
@@ -12,12 +13,21 @@ function App() {
         setCount(count + 1)
     }
 
+    const resetCount = () => {
+        setCount(0);
+
+    }
+
     return (
         <div className="App">
             <Counter count={count}/>
             {texts.map((text, index) => {
                 return <Button onClick={incrementCount} text={text} key={index}/>
             })}
+            {count > 0 &&
+                <ResetButton onClick={resetCount}/>
+            }
+
 
         </div>
     );
