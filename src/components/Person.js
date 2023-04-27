@@ -1,10 +1,12 @@
 import React from 'react';
 
 const Person = (props) => {
-    console.log(props)
+    const {firstName, lastName, email, img} = props;
     return (
-        <div>
-
+        <div className="card">
+            <img src={img} alt={'image'}/>
+            <h3>{firstName} {lastName}</h3>
+            <h4>{email}</h4>
         </div>
     );
 };
