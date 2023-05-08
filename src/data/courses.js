@@ -4,8 +4,8 @@ const courses = [
         slug: 'react',
         id: 259
     }, {
-        title: 'Complete JS Guide',
-        slug: 'js',
+        title: 'Complete JavaScript Guide',
+        slug: 'javascript',
         id: 159
     }, {
         title: 'Complete Python Guide',

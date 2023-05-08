@@ -9,15 +9,11 @@ const SingleCourse = () => {
 
     const course = courses.find((course) => course.slug === params.slug);
 
-    /*if (!course) {
-        return <NotFound/>
-    }
-*/
-    useEffect(()=>{
+    useEffect(() => {
         if (!course) {
             navigate('..', {relative: 'path'});
         }
-    },[course])
+    }, [course])
 
     return (
         <>
